@@ -22,3 +22,11 @@ function addRandomGreeting() {
   const greetingContainer = document.getElementById('greeting-container');
   greetingContainer.innerText = greeting;
 }
+
+async function getFact(){
+    const fact = await fetch('/one-thing-about-me');
+    const factText = await fact.text();
+
+    const factContainer = document.getElementById('fact-id');
+    factContainer.innerText = factText;
+}
