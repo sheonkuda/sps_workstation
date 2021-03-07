@@ -25,8 +25,10 @@ function addRandomGreeting() {
 
 async function getFact(){
     const fact = await fetch('/one-thing-about-me');
-    const factText = await fact.text();
-
+    const factText = await fact.json();
+    
+    const num = Math.trunc(Math.random() * 3);
     const factContainer = document.getElementById('fact-id');
-    factContainer.innerText = factText;
+    console.log(factText);
+    factContainer.innerText = factText[num];
 }
