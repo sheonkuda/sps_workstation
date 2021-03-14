@@ -32,3 +32,22 @@ async function getFact(){
     console.log(factText);
     factContainer.innerText = factText[num];
 }
+
+function requestTranslation() {
+        const text = document.getElementById('greeting-container').innerText;
+        const languageCode = document.getElementById('language').value;
+
+        const resultContainer = document.getElementById('greeting-container');
+
+        const params = new URLSearchParams();
+        params.append('text', text);
+        params.append('languageCode', languageCode);
+
+        fetch('/translate', {
+          method: 'POST',
+          body: params
+        }).then(response => response.text())
+        .then((translatedMessage) => {
+          resultContainer.innerText = translatedMessage;
+        });
+}

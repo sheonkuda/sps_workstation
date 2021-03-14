@@ -10,7 +10,13 @@
     <div id="content">
       <img src="sheon_images/headshot.jpg" width="500" height="600"/>
       <h1>Sheon Mwapinza <a href="https://www.linkedin.com/in/sheon-mwapinza-963518196/">LinkedIn</a>, <a href="https://github.com/sheonkuda">GitHub</a>.</h1>
-       
+      <p>Choose language for quote of the day
+      <select id="language">
+          <option value="zh">Chinese</option>
+          <option value="en">English</option>
+          <option value="sn">Shona</option>
+      </select> <button onclick="requestTranslation();">Translate</button>
+      </p>
       <button onclick="addRandomGreeting()">Quote Of The Day</button>
       <p id="greeting-container"> </p>
  
