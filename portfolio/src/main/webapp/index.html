@@ -10,9 +10,10 @@
     <div id="content">
       <img src="sheon_images/headshot.jpg" width="500" height="600"/>
       <h1>Sheon Mwapinza <a href="https://www.linkedin.com/in/sheon-mwapinza-963518196/">LinkedIn</a>, <a href="https://github.com/sheonkuda">GitHub</a>.</h1>
-      <p>Quote of the day(see bottom of page):</p>
-      <button onclick="addRandomGreeting()">Quote</button>
-      
+       
+      <button onclick="addRandomGreeting()">Quote Of The Day</button>
+      <p id="greeting-container"> </p>
+ 
       <p> 
           Hailing from the "City of Progress" Gweru, Zimbabwe! Growing up I dreamt of the Gweru that could be but,
           it did not take me long to realise that everyone had the same dream and noone seemed to be doing anything to take us there, and that's when I decided to take matters into my own hands.
@@ -48,8 +49,17 @@
             &nbsp &nbsp•	Designed and implemented the braking system of the car, and overcurrent and malfunction protection measures <br>
       </p>
       <p>Click here to to got to my <a href="sheon_images.html">Photo Gallery</a> Photo Gallery:)</p>
-      <p>Click <a href="/hello">here</a> to see content created by server code.</p>
-      <div id="greeting-container"></div>
+
+      <p> <a href="/one-thing-about-me">Fact About Me</a></p>
+      <button onclick="getFact();">Fact About ME</button> 
+      <p id="fact-id"> </p>
     </div>
+
+    <form action="/form-handler" method="POST">
+        <p>Please leave some feedback:</p>
+        <textarea name="text-input">feedback...</textarea>
+        <br/>
+        <input type="submit" />
+    </form>
   </body>
 </html>
